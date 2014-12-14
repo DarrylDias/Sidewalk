@@ -1,0 +1,16 @@
+name: Sidewalk
+version: 0.0.1
+description: "A clean and simple blog theme for **Grav**"
+icon: empire
+author:
+  name: Darryl Dias
+  email: 
+  url: http://darryldias.me
+homepage: https://github.com/DarrylDias/Sidewalk
+keywords: sidewalk, clean, simple, blog, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/DarrylDias/Sidewalk/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:

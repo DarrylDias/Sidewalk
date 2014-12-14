@@ -1,0 +1,11 @@
+<div id="disqus_thread"></div>
+<div id="disqus_loader">
+<a onclick='
+jQuery.ajaxSetup({cache:true});
+jQuery.getScript("http://{{ config.themes.Piccolo.disqus_shortname }}.disqus.com/embed.js");
+jQuery.ajaxSetup({cache:false});
+jQuery("#disqus_loader").remove();
+' class="btn">
+{Post a Comment}
+</a>
+</div>

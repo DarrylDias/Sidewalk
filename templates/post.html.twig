@@ -1,0 +1,21 @@
+{% embed 'partials/base.html.twig' %}
+	{% block content %}
+			<article class="post">
+				<h2>{{ page.title }}</h2>
+				<div class="meta">{{ page.date|date("d") }}&ensp;{{ page.date|date("M") }}&ensp;{{ page.date|date("Y") }} in {% for tag in page.taxonomy.tags %}<a href="{{ base_url }}/tag:{{tag}}">{{ tag }}</a>&ensp;{% endfor %}</div>
+				{% if big_header %}
+            		{{ page.media.images|first.cropResize(900,600).html }}
+        		{% else %}
+            		{{ page.media.images|first.cropZoom(900,300).html }}
+        		{% endif %}
+				{{ page.content }}
+
+				{% if config.themes.Sidewalk.disqus_shortname %}
+					{% if header.comments == 'false' %}
+						{% else %}
+							{% include 'partials/disqus-comments.html.twig' %}
+					{% endif%}
+			{% endif %}
+			</article>
+	{% endblock %}
+{% endembed %}

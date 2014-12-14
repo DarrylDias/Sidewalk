@@ -1,0 +1,4 @@
+<article>
+	<a href="{{ page.url }}"><h2>{{ page.title }}</h2></a>
+	<div class="meta">{{ page.date|date("d") }}&ensp;{{ page.date|date("M") }}&ensp;{{ page.date|date("Y") }} in {% for tag in page.taxonomy.tags %}<a href="{{ base_url }}/tag:{{tag}}">{{ tag }}</a>&ensp;{% endfor %}</div>
+</article>
