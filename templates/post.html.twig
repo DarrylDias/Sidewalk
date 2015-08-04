@@ -2,7 +2,7 @@
 	{% block content %}
 			<article class="post">
 				<h2>{{ page.title }}</h2>
-				<div class="meta">{{ page.date|date("d") }}&ensp;{{ page.date|date("M") }}&ensp;{{ page.date|date("Y") }} in {% for tag in page.taxonomy.tags %}<a href="{{ base_url }}/tag:{{tag}}">{{ tag }}</a>&ensp;{% endfor %}</div>
+				<div class="meta">{{ page.date|date("d") }}&ensp;{{ page.date|date("M") }}&ensp;{{ page.date|date("Y") }} in {% for tag in page.taxonomy.tag %}<a href="{{ base_url }}/blog/tag:{{tag}}">{{ tag }}</a>&ensp;{% endfor %}</div>
 				{% if big_header %}
             		{{ page.media.images|first.cropResize(900,600).html }}
         		{% else %}
