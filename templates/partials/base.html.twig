@@ -81,12 +81,12 @@
 	<a href="https://plus.google.com/{{ config.themes.Sidewalk.google_plus_account }}" rel="publisher" /></a />
 	{% endif %}
 
-	<link rel="alternate" href="{{ base_url}}/blog.rss" title="{{ site.title }}" type="application/atom+xml"/>
+	<link rel="alternate" href="{{ base_url}}/blog.atom" title="{{ site.title }}" type="application/atom+xml"/>
 
 	{% if config.themes.Sidewalk.logo  %}
 	<link rel="icon" type="image/png" href="{{ config.themes.Sidewalk.logo }}" />
 	{% endif %}
-	
+
 	<title>{% if header.title %} | {% endif %}{{ site.title }}</title>
 	{% block stylesheets %}
 	{% do assets.addCss('//fonts.googleapis.com/css?family=Open+Sans:400', 200) %}
@@ -126,7 +126,7 @@
 				</ul>
 				<ul>
 					<li>
-						<a href="{{ base_url }}/blog.rss">Feed</a>
+						<a href="{{ base_url }}/blog.atom">Feed</a>
 					</li>
 				</ul>
 				{% if config.themes.Sidewalk.github_account %}
