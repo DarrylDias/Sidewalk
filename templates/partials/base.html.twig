@@ -76,6 +76,9 @@
 	<meta name="robots" content="{{ config.themes.Sidewalk.robots }}" />
 	{% endif %}
 
+	<meta name="application-name" content="{{site.title}}"/>
+	<meta name="msapplication-TileColor" content="#000000"/>
+	<meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed={{base_url}}/blog.atom&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed={{base_url}}/blog.atom&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed={{base_url}}/blog.atom&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed={{base_url}}/blog.atom&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed={{base_url}}/blog.atom&amp;id=5; cycle=1"/>
 
 	<link rel="alternate" href="{{ base_url}}/blog.atom" title="{{ site.title }}" type="application/atom+xml"/>
 
