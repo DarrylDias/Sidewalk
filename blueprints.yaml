@@ -12,5 +12,5 @@ bugs: https://github.com/DarrylDias/Sidewalk/issues
 license: MIT
 
 form:
-  validation: strict
+  validation: loose
   fields:
