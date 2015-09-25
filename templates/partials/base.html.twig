@@ -53,7 +53,7 @@
 	{% else %}
 	<meta property="og:title" content="{{ site.title }}" />
 	{% endif %}
-	{% if base_url == '/' %}
+	{% if base_url_absolute == '/' %}
 	<meta property="og:type" content="website" />
 	{% else %}
 	<meta property="og:type" content="article" />
@@ -78,9 +78,9 @@
 
 	<meta name="application-name" content="{{site.title}}"/>
 	<meta name="msapplication-TileColor" content="#000000"/>
-	<meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed={{base_url}}/blog.atom&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed={{base_url}}/blog.atom&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed={{base_url}}/blog.atom&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed={{base_url}}/blog.atom&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed={{base_url}}/blog.atom&amp;id=5; cycle=1"/>
+	<meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed={{base_url_absolute}}/blog.atom&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed={{base_url_absolute}}/blog.atom&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed={{base_url_absolute}}/blog.atom&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed={{base_url_absolute}}/blog.atom&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed={{base_url_absolute}}/blog.atom&amp;id=5; cycle=1"/>
 
-	<link rel="alternate" href="{{ base_url}}/blog.atom" title="{{ site.title }}" type="application/atom+xml"/>
+	<link rel="alternate" href="{{ base_url_absolute}}/blog.atom" title="{{ site.title }}" type="application/atom+xml"/>
 
 	{% if config.themes.Sidewalk.logo  %}
 	<link rel="icon" type="image/png" href="{{ config.themes.Sidewalk.logo }}" />
@@ -98,7 +98,7 @@
 <body>
 	<header id="page-header">
 		<div id="masthead">
-			<a href="{{ base_url }}"><h1 id="site-title">{{ site.title }}</h1></a>
+			<a href="{{ base_url_absolute }}"><h1 id="site-title">{{ site.title }}</h1></a>
 			<p id="site-slogan">{{ site.metadata.description }}</p>
 		</div>
 	</header>
@@ -120,12 +120,12 @@
 
 				<ul>
 					<li>
-						<a href="{{ base_url }}/random">Random Post</a>
+						<a href="{{ base_url_absolute }}/random">Random Post</a>
 					</li>
 				</ul>
 				<ul>
 					<li>
-						<a href="{{ base_url }}/blog.atom">Feed</a>
+						<a href="{{ base_url_absolute }}/blog.atom">Feed</a>
 					</li>
 				</ul>
 				{% if config.themes.Sidewalk.github_account %}
