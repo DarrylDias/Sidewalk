@@ -85,7 +85,7 @@
 	<link rel="icon" type="image/png" href="{{ config.themes.Sidewalk.logo }}" />
 	{% endif %}
 
-	<title>{% if header.title %} | {% endif %}{{ site.title }}</title>
+	<title>{% if header.title %}{{ header.title|e }} | {% endif %}{{ site.title|e }}</title>
 	{% block stylesheets %}
 	{% do assets.addCss('//fonts.googleapis.com/css?family=Open+Sans:400', 200) %}
 	{% do assets.addCss('//fonts.googleapis.com/css?family=Source+Code+Pro:400,600', 200) %}
