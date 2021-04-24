@@ -1,6 +1,6 @@
 [__Sidewalk__](https://github.com/DarrylDias/Sidewalk) is a clean and simple blog theme for [Grav CMS](http://getgrav.org).
 
-![Sidewalk](assets/readme_1.png)
+![Sidewalk](preview.png)
 
 This theme can be used with [Grav skeleton blog site](https://github.com/getgrav/grav-skeleton-blog-site).
 
