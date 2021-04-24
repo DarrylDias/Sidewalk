@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 	{% block head %}
@@ -90,10 +89,14 @@
 	{% block stylesheets %}
 	{% do assets.addCss('//fonts.googleapis.com/css?family=Open+Sans:400', 200) %}
 	{% do assets.addCss('//fonts.googleapis.com/css?family=Source+Code+Pro:400,600', 200) %}
-	{% do assets.addCss('theme://static/css/screen.css', 200) %}
-	{{ assets.Css() }}
+	{% do assets.addCss('theme://css/screen.css', 200) %}
 	{% endblock %}
 	{% endblock %}
+
+	{% block assets deferred %}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
+{% endblock %}
 </head>
 <body>
 	<header id="page-header">
@@ -152,9 +155,8 @@
 			</nav>
 		</section>
 		{% block javascript %}
-		{% do assets.add('theme://static/js/jquery-2.1.1.min.js') %}
-		{% do assets.add('theme://static/js/screen.js') %}
-		{{ assets.js() }}
+		{% do assets.add('theme://js/jquery-2.1.1.min.js') %}
+		{% do assets.add('theme://js/screen.js') %}
 		{% endblock %}
 	</footer>
 </body>
