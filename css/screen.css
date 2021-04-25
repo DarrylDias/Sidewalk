@@ -652,6 +652,11 @@ td.code {
 	}
 }
 
+
+.hero-image {
+    margin-bottom: 20px;
+}
+
 pre code {
 	display: block;
 	background: #fff;
