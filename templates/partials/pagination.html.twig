@@ -2,7 +2,7 @@
 
 <ul class="pagination">
     {% if pagination.hasPrev %}
-        <li><a rel="prev" href="{{ base_url }}/blog{{ pagination.prevUrl }}">&laquo;</a></li>
+        <li><a rel="prev" href="{{ pagination.prevUrl }}">&laquo;</a></li>
     {% else %}
         <li><span>&laquo;</span></li>
     {% endif %}
@@ -12,14 +12,14 @@
         {% if paginate.isCurrent %}
             <li><span>{{ paginate.number }}</span></li>
         {% elseif paginate.isInDelta %}
-            <li><a href="{{ base_url }}/blog{{ paginate.url }}">{{ paginate.number }}</a></li>
+            <li><a href="{{ paginate.url }}">{{ paginate.number }}</a></li>
         {% elseif paginate.isDeltaBorder %}
             <li class="gap"><span>&hellip;</span></li>
         {% endif %}
 
     {% endfor %}
     {% if pagination.hasNext %}
-        <li><a rel="next" href="{{ base_url }}/blog{{ pagination.nextUrl }}">&raquo;</a></li>
+        <li><a rel="next" href="{{ pagination.nextUrl }}">&raquo;</a></li>
     {% else %}
         <li><span>&raquo;</span></li>
     {% endif %}

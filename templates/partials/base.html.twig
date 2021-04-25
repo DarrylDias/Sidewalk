@@ -89,7 +89,7 @@
 	{% block stylesheets %}
 	{% do assets.addCss('//fonts.googleapis.com/css?family=Open+Sans:400', 200) %}
 	{% do assets.addCss('//fonts.googleapis.com/css?family=Source+Code+Pro:400,600', 200) %}
-	{% do assets.addCss('theme://css/screen.css', 200) %}
+	{% do assets.addCss('theme://css/screen.min.css', 200) %}
 	{% endblock %}
 	{% endblock %}
 
@@ -101,7 +101,7 @@
 <body>
 	<header id="page-header">
 		<div id="masthead">
-			<a href="{{ base_url_absolute }}"><h1 id="site-title">{{ site.title }}</h1></a>
+			<a href="{{ home_url }}"><h1 id="site-title">{{ site.title }}</h1></a>
 			<p id="site-slogan">{{ site.metadata.description }}</p>
 		</div>
 	</header>
@@ -121,16 +121,6 @@
 					{% endfor %}
 				</ul>
 
-				<ul>
-					<li>
-						<a href="{{ base_url_absolute }}/random">Random Post</a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a href="{{ base_url_absolute }}/blog.atom">Feed</a>
-					</li>
-				</ul>
 				{% if config.themes.Sidewalk.github_account %}
 				<ul>
 					<li>

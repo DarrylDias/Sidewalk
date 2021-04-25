@@ -1,14 +1,17 @@
-{% embed 'partials/base.html.twig' %}
+{% extends 'partials/base.html.twig' %}
+
+ {% set hero_image = page.media.images|first %}
+ 
 	{% block content %}
 			<article class="post">
 				<h2>{{ page.title }}</h2>
 				<div class="meta">{{ page.date|date("d") }}&ensp;{{ page.date|date("M") }}&ensp;{{ page.date|date("Y") }} in {% for tag in page.taxonomy.tag %}<a href="{{ base_url }}/blog/tag:{{tag}}">{{ tag }}</a>&ensp;{% endfor %}</div>
-				{% if big_header %}
-            		{{ page.media.images|first.cropResize(900,600).html }}
-        		{% else %}
-            		{{ page.media.images|first.cropZoom(900,300).html }}
-        		{% endif %}
-				{{ page.content }}
+				
+				<div class="hero-image">
+					<img src="{{ hero_image.cropZoom(800,400).url|raw }}">
+				</div>
+				
+				{{ page.content | raw }}
 
 				{% if config.themes.Sidewalk.disqus_shortname %}
 					{% if header.comments == 'false' %}
@@ -17,5 +20,4 @@
 					{% endif%}
 			{% endif %}
 			</article>
-	{% endblock %}
-{% endembed %}
+{% endblock %}
